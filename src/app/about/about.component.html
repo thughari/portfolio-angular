@@ -1,0 +1,26 @@
+<section class="about">
+    <div class="profile-image">
+      <img [src]="profileImage" alt="My Profile Picture">
+    </div>
+    <div class="profile-info">
+      <h1>{{name}}</h1>
+      <p>{{bio}}</p>
+      <ul class="skills">
+        <li *ngFor="let skill of skills"><app-skill-list-item [skill]="skill"></app-skill-list-item></li>
+      </ul>
+    </div>
+  </section>
+  
+  <section class="experience">
+    <h2>Experience</h2>
+    <ul class="timeline">
+      <li *ngFor="let experience of experienceList"><app-experience-timeline-item [experience]="experience"></app-experience-timeline-item></li>
+    </ul>
+  </section>
+  
+  <section class="education">
+    <h2>Education</h2>
+    <ul class="timeline">
+      <li *ngFor="let education of educationList"><app-education-timeline-item [education]="education"></app-education-timeline-item></li>
+    </ul>
+  </section>
